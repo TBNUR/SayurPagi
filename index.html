@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Sayur Segar HORECA | UD Sayur Pagi</title>
+    <meta name="description" content="Supplier sayur segar terpercaya untuk Hotel, Resto, dan Catering. Pengiriman tepat waktu, kualitas disortir, dan harga transparan.">
+    
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .img-placeholder {
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-slate-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="leaf" class="w-8 h-8 text-brand-600"></i>
+                    <!-- Trigger untuk Admin Panel: Klik 5x pada logo -->
+                    <span id="logo-trigger" class="font-bold text-2xl tracking-tight text-gray-900 select-none cursor-pointer">UD Sayur <span class="text-brand-600">Pagi</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#solusi" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Solusi</a>
+                    <a href="#kategori" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Kategori Produk</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Tentang Kami</a>
+                    <a href="#klien" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Klien</a>
+                    <a href="#kontak" class="bg-brand-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30">
+                        Minta Pricelist
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1 shadow-lg">
+                <a href="#solusi" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Solusi</a>
+                <a href="#kategori" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Kategori Produk</a>
+                <a href="#tentang" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50 rounded-md">Tentang Kami</a>
+                <a href="#kontak" class="block mt-4 text-center bg-brand-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-brand-700">Minta Pricelist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1️⃣ Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-700 font-medium text-sm mb-6 border border-brand-100">
+                        <span class="flex w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        B2B Vegetable Supplier
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15] mb-6">
+                        Supplier Sayur Segar untuk <span class="text-brand-600">Hotel, Resto & Catering</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Kami memastikan pasokan dapur Anda aman setiap hari. Kualitas disortir ketat, harga transparan, dan garansi pengiriman tiba sebelum operasional dapur Anda dimulai.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#kontak" class="inline-flex justify-center items-center gap-2 bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-700 transition-all shadow-xl shadow-brand-500/25">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Hubungi via WhatsApp
+                        </a>
+                        <a href="#solusi" class="inline-flex justify-center items-center px-8 py-4 rounded-xl font-bold text-lg text-gray-700 bg-white border-2 border-gray-200 hover:border-brand-600 hover:text-brand-600 transition-all">
+                            Lihat Cara Kerja Kami
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative grid grid-cols-2 gap-4 h-[500px]">
+                    <div class="relative col-span-2 row-span-1 h-64 rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?q=80&w=1000&auto=format&fit=crop" alt="Gudang Sayur" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <span class="text-white font-medium text-sm flex items-center gap-1"><i data-lucide="warehouse" class="w-4 h-4"></i> Fasilitas Gudang Bersih</span>
+                        </div>
+                    </div>
+                    <div class="relative h-48 rounded-2xl overflow-hidden shadow-lg mt-2">
+                        <img src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?q=80&w=800&auto=format&fit=crop" alt="Proses Sortir" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <span class="text-white font-medium text-sm flex items-center gap-1"><i data-lucide="check-circle" class="w-4 h-4"></i> Sortir Kualitas</span>
+                        </div>
+                    </div>
+                    <div class="relative h-48 rounded-2xl overflow-hidden shadow-lg mt-2">
+                        <img src="https://images.unsplash.com/photo-1588167909337-372134608757?q=80&w=800&auto=format&fit=crop" alt="Pengiriman Pagi" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <span class="text-white font-medium text-sm flex items-center gap-1"><i data-lucide="truck" class="w-4 h-4"></i> Kirim Pagi Buta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ Masalah & Solusi Section -->
+    <section id="solusi" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kenapa Beralih ke UD Sayur Pagi?</h2>
+                <p class="text-lg text-gray-600">Kami paham betul kendala yang sering dialami dapur komersial dengan supplier tradisional. Kami hadir untuk menyelesaikannya.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-red-50 rounded-3xl p-8 border border-red-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-red-100 p-3 rounded-lg text-red-600">
+                            <i data-lucide="x-octagon" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-red-900">Masalah Lama Anda</h3>
+                    </div>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-red-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Harga Fluktuatif & Liar</h4>
+                                <p class="text-gray-600 text-sm mt-1">Harga tiba-tiba naik tanpa pemberitahuan, merusak perhitungan food cost harian.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-red-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Kualitas Tidak Konsisten</h4>
+                                <p class="text-gray-600 text-sm mt-1">Kadang bagus, kadang layu. Sayur banyak rusak (shrinkage) yang terbuang sia-sia.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="clock" class="w-6 h-6 text-red-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Pengiriman Terlambat</h4>
+                                <p class="text-gray-600 text-sm mt-1">Barang datang saat dapur sudah sibuk (rush hour), menghambat proses preping.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-50 rounded-3xl p-8 border border-brand-200 shadow-xl shadow-brand-100/50 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 bg-brand-100 w-40 h-40 rounded-full opacity-50 blur-3xl"></div>
+                    
+                    <div class="flex items-center gap-3 mb-6 relative">
+                        <div class="bg-brand-500 p-3 rounded-lg text-white">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-900">Solusi UD Sayur Pagi</h3>
+                    </div>
+                    <ul class="space-y-5 relative">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Harga Transparan & Terkunci</h4>
+                                <p class="text-gray-600 text-sm mt-1">Update pricelist berkala yang jelas. Kontrak harga (lock price) tersedia untuk volume tertentu.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sortir Kualitas Ketat (QC)</h4>
+                                <p class="text-gray-600 text-sm mt-1">Sayur disortir sebelum dikirim. Anda hanya membayar barang yang layak pakai. Retur mudah jika tak sesuai spec.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Kirim Sebelum Jam 7 Pagi</h4>
+                                <p class="text-gray-600 text-sm mt-1">Armada kami bergerak dini hari. Bahan baku siap sebelum tim dapur Anda memulai preping.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Respon Cepat (Fast Response)</h4>
+                                <p class="text-gray-600 text-sm mt-1">Admin stand-by untuk pesanan tambahan dadakan atau komplain. Komunikasi proaktif.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ Produk / Kategori Section -->
+    <section id="kategori" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2 block">Katalog Kami</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Spesialisasi Kategori Produk</h2>
+                <p class="text-lg text-gray-600">Klik pada kategori di bawah ini untuk melihat detail produk. Menyediakan ratusan SKU segar setiap harinya. Harga khusus grosir, hubungi kami untuk pricelist lengkap.</p>
+            </div>
+
+            <div id="kategori-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Kategori dirender oleh JavaScript dari Admin Panel -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ Tentang Kami Section -->
+    <section id="tentang" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop" alt="Tim UD Sayur Pagi" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-brand-900/20"></div>
+                    <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-lg flex items-center gap-4">
+                        <div class="bg-brand-100 p-3 rounded-xl text-brand-600 font-bold text-2xl">
+                            5+
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 leading-tight">Tahun<br>Pengalaman</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2 block">Tentang UD Sayur Pagi</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Mitra Stabil di Balik Dapur Hebat Anda</h2>
+                    <div class="space-y-4 text-gray-600 text-lg">
+                        <p>Berdiri sejak tahun 2019, <strong>UD Sayur Pagi</strong> lahir dari pemahaman mendalam tentang ekosistem dapur komersial. Kami tahu bahwa keterlambatan bahan baku 30 menit saja bisa merusak flow operasional restoran seharian.</p>
+                        <p><strong>Visi kami sederhana:</strong> Menjadi rantai pasok (supply chain) sayur mayur paling bisa diandalkan di Surabaya dan sekitarnya.</p>
+                        
+                        <div class="bg-gray-50 border-l-4 border-brand-500 p-6 mt-8 rounded-r-xl">
+                            <h4 class="font-bold text-gray-900 mb-2">Sistem Kerja B2B Kami:</h4>
+                            <ul class="space-y-2 text-base">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i> PO (Purchase Order) H-1 malam.</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i> Proses sortir malam hari (Night shift QC).</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i> Pengiriman subuh (Jam 04:00 - 06:30 pagi).</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i> Term of Payment (TOP) tersedia untuk klien berbadan usaha.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ Klien Kami Section -->
+    <section id="klien" class="py-20 bg-slate-50 border-t border-gray-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Dipercaya oleh Dapur Profesional</h2>
+            <p class="text-gray-500">Kami menyuplai bahan baku untuk berbagai skala bisnis kuliner dan hospitality</p>
+        </div>
+        
+        <div class="relative flex overflow-hidden group gap-6 marquee-container w-full max-w-7xl mx-auto px-4">
+            <div id="klien-track-1" class="flex shrink-0 items-center justify-around gap-6 animate-marquee min-w-full"></div>
+            <div id="klien-track-2" class="flex shrink-0 items-center justify-around gap-6 animate-marquee min-w-full" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ Call To Action Kuat -->
+    <section id="kontak" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-900">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2000&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 to-brand-800/90"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Siap Mengamankan Pasokan Dapur Anda?</h2>
+            <p class="text-brand-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Berhenti pusing mengurus fluktuasi harga pasar dan sayur yang layu. Biarkan tim kami yang menyortir dan mengirimkannya langsung ke pintu dapur Anda.
+            </p>
+            
+            <a href="https://wa.me/6282111829820?text=Halo%20UD%20Sayur%20Pagi,%20saya%20mewakili%20(Nama%20Usaha%20Anda)%20ingin%20meminta%20pricelist%20sayur%20dan%20info%20penawaran%20volume." 
+               target="_blank"
+               class="inline-flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-5 rounded-full font-extrabold text-xl hover:bg-brand-50 hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] w-full sm:w-auto">
+                <i data-lucide="message-circle" class="w-7 h-7 text-brand-600"></i>
+                Hubungi Kami untuk Pricelist
+            </a>
+            <p class="text-brand-200 text-sm mt-6 flex items-center justify-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4"></i> Tanpa komitmen. Mari diskusi kebutuhan volume Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2 text-white">
+                    <i data-lucide="leaf" class="w-6 h-6 text-brand-500"></i>
+                    <span class="font-bold text-xl tracking-tight">UD Sayur <span class="text-brand-500">Pagi</span></span>
+                </div>
+                <div class="text-center md:text-right text-sm">
+                    <p>&copy; 2026 UD Sayur Pagi B2B Supplier. All rights reserved.</p>
+                    <p class="mt-1">Melayani area Surabaya, Sidoarjo, dan Gresik.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Logic -->
+    <script>
+        lucide.createIcons();
+
+        // Navbar Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // --- SISTEM KATEGORI, KLIEN & ADMIN PANEL ---
+        
+        const defaultData = [
+            { id: 'daun', name: 'Sayur Daun', desc: 'Bayam, kangkung, caisim, pakcoy, selada air, romaine, kol, dll.', icon: 'leaf', theme: { iconBg: 'bg-brand-50', iconText: 'text-brand-600' }, products: [] },
+            { id: 'buah', name: 'Sayur Buah & Umbi', desc: 'Tomat, kentang, wortel, timun, terong, labu siam, buncis, dll.', icon: 'apple', theme: { iconBg: 'bg-orange-50', iconText: 'text-orange-600' }, products: [] },
+            { id: 'rempah', name: 'Rempah Segar', desc: 'Jahe, lengkuas, kunyit, kencur, serai, daun salam, daun jeruk.', icon: 'wheat', theme: { iconBg: 'bg-yellow-50', iconText: 'text-yellow-600' }, products: [] },
+            { id: 'bumbu', name: 'Bumbu Dapur Dasar', desc: 'Bawang merah, bawang putih, bawang bombay, aneka cabai.', icon: 'flame', theme: { iconBg: 'bg-red-50', iconText: 'text-red-600' }, products: [] },
+            { id: 'niche', name: 'Khusus Dapur Padang', desc: 'Daun singkong muda, nangka muda cacah, cabai giling, kelapa parut.', icon: 'chef-hat', isNiche: true, theme: { iconBg: 'bg-amber-100', iconText: 'text-amber-700' }, products: [] }
+        ];
+
+        // Default placeholder jika kosong
+        const defaultClients = [
+            { id: 1, name: 'Contoh Klien 1', image: 'https://placehold.co/400x200/ffffff/000000?text=Logo+Klien+1' },
+            { id: 2, name: 'Contoh Klien 2', image: 'https://placehold.co/400x200/ffffff/000000?text=Logo+Klien+2' }
+        ];
+
+        let appData = JSON.parse(localStorage.getItem('sayurPagiData')) || defaultData;
+        let clientsData = JSON.parse(localStorage.getItem('sayurPagiClients')) || defaultClients;
+        let activeAdminCategory = null;
+
+        // Render HTML Modals ke Body
+        const modalsHTML = `
+            <!-- Modal Kategori Public -->
+            <div id="modal-kategori-view" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity" onclick="if(event.target===this) closeModal('modal-kategori-view')">
+                <div class="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] overflow-hidden relative flex flex-col">
+                    <div class="sticky top-0 bg-white z-10 p-5 border-b border-gray-100 flex justify-between items-center shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <div id="modal-kategori-icon" class="p-2 rounded-lg bg-brand-50 text-brand-600"></div>
+                            <h3 id="modal-kategori-title" class="text-2xl font-bold text-gray-900">Nama Kategori</h3>
+                        </div>
+                        <button onclick="closeModal('modal-kategori-view')" class="text-gray-400 hover:text-red-500 bg-gray-50 hover:bg-red-50 p-2 rounded-full transition-colors"><i data-lucide="x" class="w-6 h-6"></i></button>
+                    </div>
+                    <div class="p-6 overflow-y-auto bg-slate-50 flex-1">
+                        <div id="modal-kategori-content" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"></div>
+                        <div id="modal-kategori-empty" class="hidden flex-col items-center justify-center py-12 text-gray-400">
+                            <i data-lucide="image-off" class="w-16 h-16 mb-4 opacity-50"></i>
+                            <p>Belum ada produk di kategori ini.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Admin -->
+            <div id="modal-admin-view" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity">
+                <div class="bg-slate-50 rounded-2xl shadow-2xl w-full max-w-6xl h-[90vh] overflow-hidden relative flex flex-col">
+                    <div class="bg-gray-900 text-white p-4 flex justify-between items-center shrink-0">
+                        <div class="flex items-center gap-2"><i data-lucide="settings" class="w-6 h-6"></i><h3 class="text-xl font-bold">Admin Panel</h3></div>
+                        <button onclick="closeModal('modal-admin-view')" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="x" class="w-7 h-7"></i></button>
+                    </div>
+                    <div class="flex-1 overflow-hidden flex flex-col md:flex-row">
+                        <!-- Sidebar Admin -->
+                        <div class="w-full md:w-1/3 bg-white border-r border-gray-200 overflow-y-auto p-4 shrink-0">
+                            <h4 class="font-bold text-gray-700 mb-4 uppercase text-sm tracking-wider">Kelola Produk</h4>
+                            <div id="admin-category-list" class="space-y-2"></div>
+                            
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <h4 class="font-bold text-gray-700 mb-4 uppercase text-sm tracking-wider">Kelola Klien</h4>
+                                <div onclick="selectAdminClients()" id="admin-menu-clients" class="p-3 rounded-lg border cursor-pointer font-medium text-sm flex items-center justify-between bg-white border-gray-100 text-gray-600 hover:bg-gray-50 transition-colors">
+                                    <div class="flex items-center gap-3"><i data-lucide="users" class="w-4 h-4"></i>Klien Kami</div>
+                                    <span id="admin-client-count" class="bg-white px-2.5 py-0.5 rounded-full text-xs font-bold border border-gray-200">0</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed">
+                                <strong>Info:</strong> Masukkan <b>Link URL Gambar</b> (contoh: <i>https://...</i>) untuk foto sayur dan logo klien agar langsung muncul. Anda bisa mengupload gambar ke situs gratis seperti <a href="https://postimages.org" target="_blank" class="font-bold underline">postimages.org</a> atau <a href="https://imgur.com" target="_blank" class="font-bold underline">imgur.com</a>.
+                            </div>
+                        </div>
+
+                        <!-- Main Content Admin -->
+                        <div class="w-full md:w-2/3 p-6 overflow-y-auto bg-slate-50 flex-1">
+                            <!-- Area Produk -->
+                            <div id="admin-product-area" class="hidden">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h4 id="admin-active-category-name" class="text-2xl font-bold text-gray-800">Kategori</h4>
+                                    <button onclick="saveAdminData()" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 shadow-lg transition-transform active:scale-95"><i data-lucide="save" class="w-5 h-5"></i> Simpan Perubahan</button>
+                                </div>
+                                
+                                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm mb-6">
+                                    <h5 class="font-bold text-gray-700 mb-4 text-sm uppercase flex items-center gap-2"><i data-lucide="plus-circle" class="w-4 h-4"></i> Tambah Produk</h5>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">Nama Produk</label>
+                                            <input type="text" id="add-prod-name" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" placeholder="Contoh: Brokoli Super">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">Link URL Gambar (http://...)</label>
+                                            <input type="text" id="add-prod-img" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" placeholder="Masukkan link gambar disini">
+                                        </div>
+                                    </div>
+                                    <button onclick="addProduct()" class="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold w-full transition-colors">Tambah ke Kategori</button>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                                    <table class="w-full text-left text-sm text-gray-600">
+                                        <thead class="bg-gray-50 border-b border-gray-200">
+                                            <tr>
+                                                <th class="px-4 py-3 font-semibold w-24 text-center">Urutan</th>
+                                                <th class="px-4 py-3 font-semibold w-20">Gambar</th>
+                                                <th class="px-4 py-3 font-semibold">Nama & URL</th>
+                                                <th class="px-4 py-3 font-semibold text-right">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="admin-product-list" class="divide-y divide-gray-100"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Area Klien -->
+                            <div id="admin-client-area" class="hidden">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h4 class="text-2xl font-bold text-gray-800">Manajemen Klien</h4>
+                                    <button onclick="saveAdminData()" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 shadow-lg transition-transform active:scale-95"><i data-lucide="save" class="w-5 h-5"></i> Simpan Perubahan</button>
+                                </div>
+                                
+                                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm mb-6">
+                                    <h5 class="font-bold text-gray-700 mb-4 text-sm uppercase flex items-center gap-2"><i data-lucide="plus-circle" class="w-4 h-4"></i> Tambah Klien</h5>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">Nama Instansi/Klien</label>
+                                            <input type="text" id="add-client-name" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" placeholder="Contoh: Hotel Bintang Lima">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">Link URL Logo (http://...)</label>
+                                            <input type="text" id="add-client-img" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" placeholder="Masukkan link logo disini">
+                                        </div>
+                                    </div>
+                                    <button onclick="addClient()" class="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold w-full transition-colors">Tambah Klien</button>
+                                </div>
+
+                                <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                                    <table class="w-full text-left text-sm text-gray-600">
+                                        <thead class="bg-gray-50 border-b border-gray-200">
+                                            <tr>
+                                                <th class="px-4 py-3 font-semibold w-24 text-center">Urutan</th>
+                                                <th class="px-4 py-3 font-semibold w-24">Logo</th>
+                                                <th class="px-4 py-3 font-semibold">Nama & URL</th>
+                                                <th class="px-4 py-3 font-semibold text-right">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="admin-client-list" class="divide-y divide-gray-100"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div id="admin-empty-state" class="h-full flex flex-col items-center justify-center text-gray-400">
+                                <i data-lucide="folder-open" class="w-16 h-16 mb-4 opacity-50"></i>
+                                <p>Pilih menu di samping untuk mulai mengelola.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Login Admin -->
+            <div id="modal-admin-login" class="fixed inset-0 z-[110] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity">
+                <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden relative p-6 text-center transform transition-all">
+                    <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-4"><i data-lucide="lock" class="w-8 h-8"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Akses Admin</h3>
+                    <p class="text-gray-500 mb-6 text-sm">Masukkan kata sandi untuk mengelola katalog produk.</p>
+                    <input type="password" id="admin-password-input" class="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-center tracking-widest text-lg font-bold" placeholder="••••••••" onkeypress="if(event.key === 'Enter') submitAdminLogin()">
+                    <p id="admin-login-error" class="text-red-500 text-sm hidden mb-4 font-medium flex items-center justify-center gap-1"><i data-lucide="alert-circle" class="w-4 h-4"></i> Kata sandi salah!</p>
+                    <div class="flex gap-3">
+                        <button onclick="closeModal('modal-admin-login')" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 rounded-xl transition-colors">Batal</button>
+                        <button onclick="submitAdminLogin()" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition-colors shadow-lg shadow-brand-500/30">Masuk</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalsHTML);
+
+        // --- FUNGSI RENDER PUBLIC ---
+        function renderCategories() {
+            const container = document.getElementById('kategori-container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            appData.forEach(cat => {
+                const isNiche = cat.isNiche;
+                const colSpan = isNiche ? 'lg:col-span-2 flex flex-col md:flex-row gap-6 items-start md:items-center' : 'flex flex-col';
+                const count = cat.products ? cat.products.length : 0;
+                
+                const html = `
+                    <div onclick="openCategory('${cat.id}')" class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-300 transition-all cursor-pointer group relative overflow-hidden ${colSpan}">
+                        <div class="absolute top-4 right-4 bg-gray-50 text-gray-400 border border-gray-100 text-xs font-bold px-3 py-1.5 rounded-full group-hover:bg-brand-50 group-hover:text-brand-600 group-hover:border-brand-200 transition-colors">Lihat ${count} Produk</div>
+                        <div class="w-14 h-14 ${cat.theme.iconBg} ${cat.theme.iconText} rounded-xl flex items-center justify-center mb-6 shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform"><i data-lucide="${cat.icon}" class="w-7 h-7"></i></div>
+                        <div class="mt-auto w-full">
+                            ${isNiche ? '<div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded mb-2">NICHE SPECIALTY</div>' : ''}
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-600 transition-colors flex items-center justify-between">${cat.name} <i data-lucide="arrow-right" class="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300"></i></h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">${cat.desc}</p>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+            lucide.createIcons();
+        }
+
+        function renderPublicClients() {
+            const track1 = document.getElementById('klien-track-1');
+            const track2 = document.getElementById('klien-track-2');
+            if(!track1 || !track2) return;
+
+            if(clientsData.length === 0) {
+                track1.innerHTML = '<p class="text-gray-400 text-center w-full">Belum ada data klien.</p>';
+                track2.innerHTML = '';
+                return;
+            }
+
+            let itemsHTML = '';
+            clientsData.forEach(c => {
+                // Gunakan URL langsung, atau path lokal jika bukan URL
+                const imgSrc = c.image.startsWith('http') || c.image.startsWith('data:') ? c.image : `./Klien/${c.image}`;
+                const fallbackImg = `https://placehold.co/200x100/ffffff/94a3b8?text=${encodeURIComponent(c.name)}`;
+                
+                itemsHTML += `
+                    <div class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 min-w-[220px] max-w-[220px] grayscale hover:grayscale-0 transition-all duration-300">
+                        <div class="h-16 w-full flex items-center justify-center mb-3">
+                            <img src="${imgSrc}" onerror="this.onerror=null; this.src='${fallbackImg}';" alt="${c.name}" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <span class="font-bold text-gray-600 text-sm text-center whitespace-normal">${c.name}</span>
+                    </div>
+                `;
+            });
+
+            // Repeat to ensure marquee looks infinite even with few items
+            const repeatedContent = itemsHTML.repeat(Math.ceil(6 / (clientsData.length || 1)));
+            track1.innerHTML = repeatedContent;
+            track2.innerHTML = repeatedContent;
+        }
+
+        function openCategory(id) {
+            const cat = appData.find(c => c.id === id);
+            if(!cat) return;
+
+            document.getElementById('modal-kategori-title').innerText = cat.name;
+            document.getElementById('modal-kategori-icon').innerHTML = `<i data-lucide="${cat.icon}" class="w-6 h-6"></i>`;
+            
+            const content = document.getElementById('modal-kategori-content');
+            const emptyState = document.getElementById('modal-kategori-empty');
+            content.innerHTML = '';
+            
+            if (!cat.products || cat.products.length === 0) {
+                content.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                emptyState.style.display = 'flex';
+            } else {
+                content.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+                emptyState.style.display = 'none';
+
+                cat.products.forEach(p => {
+                    const imgSrc = p.image.startsWith('http') || p.image.startsWith('data:') ? p.image : `./Kategori_Produk/${p.image}`;
+                    const fallbackImg = `https://placehold.co/400x400/f8fafc/94a3b8?text=${encodeURIComponent(p.name)}`;
+                    
+                    const html = `
+                        <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg transition-all group">
+                            <div class="aspect-square bg-gray-50 relative overflow-hidden">
+                                <img src="${imgSrc}" onerror="this.onerror=null; this.src='${fallbackImg}';" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-4 text-center border-t border-gray-50">
+                                <h4 class="font-bold text-gray-800 text-sm">${p.name}</h4>
+                            </div>
+                        </div>
+                    `;
+                    content.insertAdjacentHTML('beforeend', html);
+                });
+            }
+
+            document.getElementById('modal-kategori-view').classList.remove('hidden');
+            document.getElementById('modal-kategori-view').classList.add('flex');
+            lucide.createIcons();
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.getElementById(id).classList.remove('flex');
+        }
+
+        // --- SISTEM LOGIN ADMIN ---
+        let clickCount = 0;
+        let clickTimeout;
+        const logoTrigger = document.getElementById('logo-trigger');
+        
+        if(logoTrigger) {
+            logoTrigger.addEventListener('click', () => {
+                clickCount++;
+                clearTimeout(clickTimeout);
+                if (clickCount >= 5) {
+                    clickCount = 0;
+                    promptAdmin();
+                } else {
+                    clickTimeout = setTimeout(() => { clickCount = 0; }, 1500);
+                }
+            });
+        }
+
+        function promptAdmin() {
+            document.getElementById('admin-password-input').value = '';
+            document.getElementById('admin-login-error').classList.add('hidden');
+            document.getElementById('modal-admin-login').classList.remove('hidden');
+            document.getElementById('modal-admin-login').classList.add('flex');
+            lucide.createIcons();
+            setTimeout(() => document.getElementById('admin-password-input').focus(), 100);
+        }
+
+        function submitAdminLogin() {
+            const pwd = document.getElementById('admin-password-input').value;
+            if (pwd === "SayurPagi001") {
+                closeModal('modal-admin-login');
+                openAdmin();
+            } else {
+                document.getElementById('admin-login-error').classList.remove('hidden');
+            }
+        }
+
+        // --- LOGIKA ADMIN PANEL ---
+        function openAdmin() {
+            document.getElementById('modal-admin-view').classList.remove('hidden');
+            document.getElementById('modal-admin-view').classList.add('flex');
+            renderAdminSidebar();
+        }
+
+        function renderAdminSidebar() {
+            const list = document.getElementById('admin-category-list');
+            list.innerHTML = '';
+            
+            appData.forEach(cat => {
+                const isActive = activeAdminCategory === cat.id;
+                const bg = isActive ? 'bg-brand-50 border-brand-200 text-brand-700' : 'bg-white border-gray-100 text-gray-600 hover:bg-gray-50';
+                
+                const html = `
+                    <div onclick="selectAdminCategory('${cat.id}')" class="p-3 rounded-lg border cursor-pointer font-medium text-sm flex items-center justify-between ${bg} transition-colors">
+                        <div class="flex items-center gap-3"><i data-lucide="${cat.icon}" class="w-4 h-4"></i> ${cat.name}</div>
+                        <span class="bg-white px-2.5 py-0.5 rounded-full text-xs font-bold border border-gray-200">${cat.products ? cat.products.length : 0}</span>
+                    </div>
+                `;
+                list.insertAdjacentHTML('beforeend', html);
+            });
+
+            document.getElementById('admin-client-count').innerText = clientsData.length;
+            const menuClient = document.getElementById('admin-menu-clients');
+            if(activeAdminCategory === '__clients__') {
+                menuClient.className = 'p-3 rounded-lg border cursor-pointer font-medium text-sm flex items-center justify-between bg-brand-50 border-brand-200 text-brand-700 transition-colors';
+            } else {
+                menuClient.className = 'p-3 rounded-lg border cursor-pointer font-medium text-sm flex items-center justify-between bg-white border-gray-100 text-gray-600 hover:bg-gray-50 transition-colors';
+            }
+            lucide.createIcons();
+        }
+
+        function selectAdminCategory(id) {
+            activeAdminCategory = id;
+            renderAdminSidebar(); 
+            document.getElementById('admin-empty-state').classList.add('hidden');
+            document.getElementById('admin-client-area').classList.add('hidden');
+            document.getElementById('admin-product-area').classList.remove('hidden');
+            
+            const cat = appData.find(c => c.id === id);
+            document.getElementById('admin-active-category-name').innerText = cat.name;
+            renderAdminProducts();
+        }
+
+        function renderAdminProducts() {
+            const cat = appData.find(c => c.id === activeAdminCategory);
+            const list = document.getElementById('admin-product-list');
+            list.innerHTML = '';
+
+            if (!cat.products || cat.products.length === 0) {
+                list.innerHTML = '<tr><td colspan="4" class="px-4 py-8 text-center text-gray-400 bg-gray-50/50">Belum ada produk.</td></tr>';
+                return;
+            }
+
+            cat.products.forEach((p, index) => {
+                const imgSrc = p.image.startsWith('http') || p.image.startsWith('data:') ? p.image : `./Kategori_Produk/${p.image}`;
+                const fallbackImg = `https://placehold.co/100x100/f8fafc/94a3b8?text=No+Img`;
+                
+                const html = `
+                    <tr class="hover:bg-gray-50 transition-colors group">
+                        <td class="px-4 py-3 text-center border-r border-gray-50">
+                            <div class="flex flex-col items-center gap-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <button onclick="moveProduct(${index}, -1)" class="text-gray-400 hover:text-brand-600 bg-white shadow-sm rounded border border-gray-100 ${index === 0 ? 'invisible' : ''}"><i data-lucide="chevron-up" class="w-4 h-4"></i></button>
+                                <span class="font-bold text-xs text-gray-500 my-1">${index + 1}</span>
+                                <button onclick="moveProduct(${index}, 1)" class="text-gray-400 hover:text-brand-600 bg-white shadow-sm rounded border border-gray-100 ${index === cat.products.length - 1 ? 'invisible' : ''}"><i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
+                                <img src="${imgSrc}" onerror="this.onerror=null; this.src='${fallbackImg}';" class="w-full h-full object-cover">
+                            </div>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="font-bold text-gray-800">${p.name}</div>
+                            <div class="text-xs text-brand-600 truncate max-w-[200px] mt-0.5" title="${p.image}">${p.image.startsWith('http') ? 'Link URL' : p.image}</div>
+                        </td>
+                        <td class="px-4 py-3 text-right">
+                            <button onclick="deleteProduct(${index})" class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"><i data-lucide="trash-2" class="w-5 h-5"></i></button>
+                        </td>
+                    </tr>
+                `;
+                list.insertAdjacentHTML('beforeend', html);
+            });
+            lucide.createIcons();
+        }
+
+        function addProduct() {
+            const nameInput = document.getElementById('add-prod-name');
+            const imgInput = document.getElementById('add-prod-img');
+            
+            if (!nameInput.value || !imgInput.value) {
+                alert("Mohon isi nama produk dan link URL gambar!");
+                return;
+            }
+
+            const cat = appData.find(c => c.id === activeAdminCategory);
+            if (!cat.products) cat.products = [];
+            
+            cat.products.push({
+                id: Date.now(),
+                name: nameInput.value,
+                image: imgInput.value.trim() // Biarkan URL utuh
+            });
+
+            nameInput.value = '';
+            imgInput.value = '';
+            renderAdminProducts();
+            renderAdminSidebar(); 
+        }
+
+        function moveProduct(index, direction) {
+            const cat = appData.find(c => c.id === activeAdminCategory);
+            if (index + direction < 0 || index + direction >= cat.products.length) return;
+            const temp = cat.products[index];
+            cat.products[index] = cat.products[index + direction];
+            cat.products[index + direction] = temp;
+            renderAdminProducts();
+        }
+
+        function deleteProduct(index) {
+            if(confirm("Yakin ingin menghapus produk ini?")) {
+                const cat = appData.find(c => c.id === activeAdminCategory);
+                cat.products.splice(index, 1);
+                renderAdminProducts();
+                renderAdminSidebar();
+            }
+        }
+
+        function selectAdminClients() {
+            activeAdminCategory = '__clients__';
+            renderAdminSidebar();
+            document.getElementById('admin-empty-state').classList.add('hidden');
+            document.getElementById('admin-product-area').classList.add('hidden');
+            document.getElementById('admin-client-area').classList.remove('hidden');
+            renderAdminClients();
+        }
+
+        function renderAdminClients() {
+            const list = document.getElementById('admin-client-list');
+            list.innerHTML = '';
+
+            if (clientsData.length === 0) {
+                list.innerHTML = '<tr><td colspan="4" class="px-4 py-8 text-center text-gray-400 bg-gray-50/50">Belum ada klien.</td></tr>';
+                return;
+            }
+
+            clientsData.forEach((c, index) => {
+                const imgSrc = c.image.startsWith('http') || c.image.startsWith('data:') ? c.image : `./Klien/${c.image}`;
+                const fallbackImg = `https://placehold.co/100x100/f8fafc/94a3b8?text=No+Img`;
+                
+                const html = `
+                    <tr class="hover:bg-gray-50 transition-colors group">
+                        <td class="px-4 py-3 text-center border-r border-gray-50">
+                            <div class="flex flex-col items-center gap-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <button onclick="moveClient(${index}, -1)" class="text-gray-400 hover:text-brand-600 bg-white shadow-sm rounded border border-gray-100 ${index === 0 ? 'invisible' : ''}"><i data-lucide="chevron-up" class="w-4 h-4"></i></button>
+                                <span class="font-bold text-xs text-gray-500 my-1">${index + 1}</span>
+                                <button onclick="moveClient(${index}, 1)" class="text-gray-400 hover:text-brand-600 bg-white shadow-sm rounded border border-gray-100 ${index === clientsData.length - 1 ? 'invisible' : ''}"><i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="h-10 w-auto bg-gray-100 rounded overflow-hidden flex items-center justify-center p-1 border border-gray-200">
+                                <img src="${imgSrc}" onerror="this.onerror=null; this.src='${fallbackImg}';" class="max-h-full max-w-full object-contain">
+                            </div>
+                        </td>
+                        <td class="px-4 py-3">
+                            <div class="font-bold text-gray-800">${c.name}</div>
+                            <div class="text-xs text-brand-600 truncate max-w-[200px] mt-0.5" title="${c.image}">${c.image.startsWith('http') ? 'Link URL' : c.image}</div>
+                        </td>
+                        <td class="px-4 py-3 text-right">
+                            <button onclick="deleteClient(${index})" class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"><i data-lucide="trash-2" class="w-5 h-5"></i></button>
+                        </td>
+                    </tr>
+                `;
+                list.insertAdjacentHTML('beforeend', html);
+            });
+            lucide.createIcons();
+        }
+
+        function addClient() {
+            const nameInput = document.getElementById('add-client-name');
+            const imgInput = document.getElementById('add-client-img');
+            
+            if (!nameInput.value || !imgInput.value) {
+                alert("Mohon isi nama klien dan link URL logonya!");
+                return;
+            }
+            
+            clientsData.push({
+                id: Date.now(),
+                name: nameInput.value,
+                image: imgInput.value.trim()
+            });
+
+            nameInput.value = '';
+            imgInput.value = '';
+            renderAdminClients();
+            renderAdminSidebar(); 
+        }
+
+        function moveClient(index, direction) {
+            if (index + direction < 0 || index + direction >= clientsData.length) return;
+            const temp = clientsData[index];
+            clientsData[index] = clientsData[index + direction];
+            clientsData[index + direction] = temp;
+            renderAdminClients();
+        }
+
+        function deleteClient(index) {
+            if(confirm("Yakin ingin menghapus klien ini?")) {
+                clientsData.splice(index, 1);
+                renderAdminClients();
+                renderAdminSidebar();
+            }
+        }
+
+        function saveAdminData() {
+            localStorage.setItem('sayurPagiData', JSON.stringify(appData));
+            localStorage.setItem('sayurPagiClients', JSON.stringify(clientsData));
+            alert("✅ Perubahan Berhasil Disimpan!");
+            renderCategories(); 
+            renderPublicClients();
+        }
+
+        // Render awal pada saat halaman dimuat
+        renderCategories();
+        renderPublicClients();
+
+    </script>
+</body>
+</html>
